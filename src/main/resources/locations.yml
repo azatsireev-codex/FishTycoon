@@ -1,0 +1,63 @@
+locations:
+  starter_bay:
+    displayName: "Starter Bay"
+    world: world
+    center: {x: 0, y: 64, z: 0}
+    radius: 220
+    requiredLevel: 1
+    fishPool: [river_perch, mud_carp, silver_shiner, blue_bream, striped_basslet, dusk_eel, glass_goby, moon_sardine, sunfin]
+    hotspots:
+      lily_edge:
+        displayName: "Lily Edge"
+        center: {x: 35, y: 63, z: -20}
+        radius: 25
+        rareBoost: 0.03
+        specialPool: [dusk_eel, glass_goby, silver_shiner]
+      old_pier:
+        displayName: "Old Pier"
+        center: {x: -48, y: 64, z: 12}
+        radius: 22
+        rareBoost: 0.02
+        specialPool: [striped_basslet, blue_bream, sunfin]
+
+  coral_coast:
+    displayName: "Coral Coast"
+    world: world
+    center: {x: 600, y: 63, z: 150}
+    radius: 260
+    requiredLevel: 15
+    fishPool: [blue_bream, striped_basslet, ember_trout, tide_snapper, coral_darter, reef_guardian, pearl_angler, storm_mackerel, kelp_runner, sunfin, brine_pike, crown_tuna]
+    hotspots:
+      reef_gate:
+        displayName: "Reef Gate"
+        center: {x: 642, y: 62, z: 198}
+        radius: 28
+        rareBoost: 0.05
+        specialPool: [coral_darter, reef_guardian, pearl_angler, storm_mackerel]
+      kelp_tunnel:
+        displayName: "Kelp Tunnel"
+        center: {x: 558, y: 61, z: 120}
+        radius: 24
+        rareBoost: 0.04
+        specialPool: [kelp_runner, brine_pike, ember_trout]
+
+  abyssal_reach:
+    displayName: "Abyssal Reach"
+    world: world
+    center: {x: -800, y: 50, z: -500}
+    radius: 320
+    requiredLevel: 30
+    fishPool: [glass_goby, storm_mackerel, thunder_ray, leviathan_koi, abyss_blinker, void_sturgeon, deep_orb_fish, crown_tuna, phantom_fin, oracle_whalelet]
+    hotspots:
+      trench_mouth:
+        displayName: "Trench Mouth"
+        center: {x: -770, y: 48, z: -460}
+        radius: 30
+        rareBoost: 0.08
+        specialPool: [thunder_ray, abyss_blinker, deep_orb_fish, phantom_fin]
+      silent_chasm:
+        displayName: "Silent Chasm"
+        center: {x: -850, y: 42, z: -540}
+        radius: 34
+        rareBoost: 0.1
+        specialPool: [void_sturgeon, oracle_whalelet, leviathan_koi]

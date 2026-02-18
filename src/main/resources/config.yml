@@ -1,0 +1,82 @@
+progression:
+  maxLevel: 50
+  baseXpPerCatch: 10
+  baseXpPerLevel: 100
+
+cooldowns:
+  rodClaimSeconds: 300
+
+fishing:
+  replaceVanillaLoot: true
+
+
+backpack:
+  baseCapacity: 30
+  capacityPerLevel: 15
+  maxLevel: 20
+  upgradeBaseCost: 500
+  upgradeCostScale: 1.35
+
+rebirth:
+  resetUpgrades: true
+  sellBonusPerRebirth: 0.01
+  rareBonusPerRebirth: 0.005
+  bonusCap: 1.0
+
+upgrades:
+  rare_chance:
+    name: "RareChance+"
+    description: "Increase odds for rare fish"
+    maxTier: 15
+    baseCost: 500
+    costScale: 1.35
+    valuePerTier: 0.008
+  size_boost:
+    name: "SizeBoost+"
+    description: "Increase average fish size"
+    maxTier: 15
+    baseCost: 450
+    costScale: 1.32
+    valuePerTier: 0.01
+  double_catch:
+    name: "DoubleCatch"
+    description: "Chance to duplicate caught fish"
+    maxTier: 8
+    baseCost: 900
+    costScale: 1.4
+    valuePerTier: 0.01
+  sell_bonus:
+    name: "SellBonus+"
+    description: "Increase sell price"
+    maxTier: 20
+    baseCost: 600
+    costScale: 1.3
+    valuePerTier: 0.01
+  xp_boost:
+    name: "XPBoost+"
+    description: "Gain more rod XP"
+    maxTier: 20
+    baseCost: 400
+    costScale: 1.28
+    valuePerTier: 0.012
+  hotspot_sense:
+    name: "HotspotSense"
+    description: "Receive feedback near hotspots"
+    maxTier: 1
+    baseCost: 1000
+    costScale: 1.0
+    valuePerTier: 1.0
+  location_unlock:
+    name: "LocationUnlock"
+    description: "Unlock high-tier locations earlier"
+    maxTier: 10
+    baseCost: 750
+    costScale: 1.35
+    valuePerTier: 1.0
+  luck_stabilizer:
+    name: "LuckStabilizer"
+    description: "Reduce unlucky streaks"
+    maxTier: 10
+    baseCost: 700
+    costScale: 1.33
+    valuePerTier: 0.006

@@ -1,0 +1,20 @@
+name: FishTycoon
+version: 1.0.0
+main: com.fishtycoon.FishTycoonPlugin
+api-version: '1.21'
+author: Codex
+depend: [Vault]
+softdepend: [PlaceholderAPI, WorldGuard]
+commands:
+  fish:
+    description: FishTycoon main command
+    usage: /fish
+permissions:
+  fishtycoon.use:
+    default: true
+  fishtycoon.sell:
+    default: true
+  fishtycoon.rebirth:
+    default: true
+  fishtycoon.admin.*:
+    default: op
