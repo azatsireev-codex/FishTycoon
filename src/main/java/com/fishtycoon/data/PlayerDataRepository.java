@@ -2,10 +2,12 @@ package com.fishtycoon.data;
 
 import com.fishtycoon.FishTycoonPlugin;
 import com.fishtycoon.model.BackpackFishEntry;
+import com.fishtycoon.model.LeaderboardEntry;
 import com.fishtycoon.model.PlayerData;
 import com.fishtycoon.model.PlayerFishStat;
 import com.fishtycoon.model.UpgradeType;
 import org.bukkit.Bukkit;
+import org.bukkit.OfflinePlayer;
 
 import java.io.File;
 import java.sql.*;
@@ -145,4 +147,45 @@ public class PlayerDataRepository {
             }
         });
     }
+
+
+    public java.util.List<LeaderboardEntry> topByRodLevel(int limit) {
+        return fetchTop("SELECT uuid, rod_level AS value FROM players ORDER BY rod_level DESC, rod_xp DESC LIMIT ?", limit);
+    }
+
+    public java.util.List<LeaderboardEntry> topByRebirth(int limit) {
+        return fetchTop("SELECT uuid, rebirth_count AS value FROM players ORDER BY rebirth_count DESC, rod_level DESC LIMIT ?", limit);
+    }
+
+    public java.util.List<LeaderboardEntry> topByCaught(int limit) {
+        return fetchTop("SELECT p.uuid, COALESCE(SUM(b.times_caught), 0) AS value FROM players p LEFT JOIN bestiary b ON p.uuid=b.uuid GROUP BY p.uuid ORDER BY value DESC LIMIT ?", limit);
+    }
+
+    private java.util.List<LeaderboardEntry> fetchTop(String sql, int limit) {
+        java.util.List<LeaderboardEntry> result = new java.util.ArrayList<>();
+        try (PreparedStatement ps = connection.prepareStatement(sql)) {
+            ps.setInt(1, limit);
+            try (ResultSet rs = ps.executeQuery()) {
+                while (rs.next()) {
+                    String raw = rs.getString("uuid");
+                    int value = rs.getInt("value");
+                    if (raw == null) continue;
+                    UUID uuid = UUID.fromString(raw);
+                    result.add(new LeaderboardEntry(uuid, resolveName(uuid), value));
+                }
+            }
+        } catch (Exception e) {
+            plugin.getLogger().warning("Failed to fetch leaderboard: " + e.getMessage());
+        }
+        return result;
+    }
+
+    private String resolveName(UUID uuid) {
+        OfflinePlayer offline = Bukkit.getOfflinePlayer(uuid);
+        String name = offline.getName();
+        if (name != null && !name.isBlank()) return name;
+        String s = uuid.toString();
+        return s.substring(0, Math.min(8, s.length()));
+    }
+
 }

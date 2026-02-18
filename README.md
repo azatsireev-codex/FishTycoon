@@ -60,3 +60,13 @@ mvn clean package
 - `config.yml` - progression, rebirth, multipliers, upgrade definitions
 - `fish.yml` - custom fish definitions
 - `locations.yml` - locations + hotspots
+
+
+## PlaceholderAPI
+Available placeholders for tops:
+- `%fishtycoon_top_rod_1_name%`, `%fishtycoon_top_rod_1_value%`
+- `%fishtycoon_top_rebirth_1_name%`, `%fishtycoon_top_rebirth_1_value%`
+- `%fishtycoon_top_caught_1_name%`, `%fishtycoon_top_caught_1_value%`
+- `%fishtycoon_rank_rod%`, `%fishtycoon_rank_rebirth%`, `%fishtycoon_rank_caught%`
+
+Top cache refreshes every minute. Manual refresh placeholder: `%fishtycoon_leaderboards_refresh%`.

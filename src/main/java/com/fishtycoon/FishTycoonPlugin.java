@@ -7,6 +7,7 @@ import com.fishtycoon.listener.BackpackItemListener;
 import com.fishtycoon.listener.FishingListener;
 import com.fishtycoon.listener.MenuListener;
 import com.fishtycoon.listener.PlayerSessionListener;
+import com.fishtycoon.placeholder.FishTycoonPlaceholderExpansion;
 import com.fishtycoon.service.*;
 import com.fishtycoon.util.KeyRegistry;
 import net.milkbowl.vault.economy.Economy;
@@ -30,6 +31,8 @@ public class FishTycoonPlugin extends JavaPlugin {
     private EconomyService economyService;
     private RebirthService rebirthService;
     private MenuService menuService;
+    private LeaderboardService leaderboardService;
+    private FishTycoonPlaceholderExpansion placeholderExpansion;
 
     @Override
     public void onEnable() {
@@ -60,6 +63,13 @@ public class FishTycoonPlugin extends JavaPlugin {
         economyService = new EconomyService(this);
         rebirthService = new RebirthService(this);
         menuService = new MenuService(this);
+        leaderboardService = new LeaderboardService(this);
+        leaderboardService.start();
+
+        if (Bukkit.getPluginManager().isPluginEnabled("PlaceholderAPI")) {
+            placeholderExpansion = new FishTycoonPlaceholderExpansion(this);
+            placeholderExpansion.register();
+        }
 
         FishCommand command = new FishCommand(this);
         getCommand("fish").setExecutor(command);
@@ -74,6 +84,8 @@ public class FishTycoonPlugin extends JavaPlugin {
     @Override
     public void onDisable() {
         if (sessionService != null) sessionService.flushAll();
+        if (leaderboardService != null) leaderboardService.stop();
+        if (placeholderExpansion != null) placeholderExpansion.unregister();
         if (repository != null) repository.close();
     }
 
@@ -95,5 +107,6 @@ public class FishTycoonPlugin extends JavaPlugin {
     public EconomyService economyService() { return economyService; }
     public RebirthService rebirth() { return rebirthService; }
     public MenuService menus() { return menuService; }
+    public LeaderboardService leaderboards() { return leaderboardService; }
     public PlayerDataRepository repo() { return repository; }
 }
