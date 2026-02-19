@@ -1,0 +1,26 @@
+fish:
+  river_perch: {displayName: "<white>River Perch", rarity: COMMON, sizeMin: 12, sizeMax: 35, basePrice: 15, description: "A common freshwater fish.", allowedLocations: [starter_bay]}
+  mud_carp: {displayName: "<white>Mud Carp", rarity: COMMON, sizeMin: 10, sizeMax: 45, basePrice: 14, description: "Hardy fish from murky waters.", allowedLocations: [starter_bay]}
+  silver_shiner: {displayName: "<green>Silver Shiner", rarity: UNCOMMON, sizeMin: 8, sizeMax: 24, basePrice: 20, description: "Quick reflective fish.", allowedLocations: [starter_bay]}
+  blue_bream: {displayName: "<green>Blue Bream", rarity: UNCOMMON, sizeMin: 15, sizeMax: 33, basePrice: 22, description: "Blue-tinted bream.", allowedLocations: [starter_bay, coral_coast]}
+  striped_basslet: {displayName: "<green>Striped Basslet", rarity: UNCOMMON, sizeMin: 18, sizeMax: 50, basePrice: 25, description: "Aggressive juvenile predator.", allowedLocations: [starter_bay, coral_coast]}
+  dusk_eel: {displayName: "<blue>Dusk Eel", rarity: RARE, sizeMin: 25, sizeMax: 80, basePrice: 45, description: "Elusive dusk hunter.", allowedLocations: [starter_bay]}
+  glass_goby: {displayName: "<blue>Glass Goby", rarity: RARE, sizeMin: 6, sizeMax: 18, basePrice: 40, description: "Nearly transparent body.", allowedLocations: [starter_bay, abyssal_reach]}
+  ember_trout: {displayName: "<blue>Ember Trout", rarity: RARE, sizeMin: 22, sizeMax: 56, basePrice: 50, description: "Warm glowing scales.", allowedLocations: [coral_coast]}
+  tide_snapper: {displayName: "<blue>Tide Snapper", rarity: RARE, sizeMin: 20, sizeMax: 40, basePrice: 48, description: "Snaps at incoming tides.", allowedLocations: [coral_coast]}
+  coral_darter: {displayName: "<light_purple>Coral Darter", rarity: EPIC, sizeMin: 12, sizeMax: 30, basePrice: 80, description: "Colorful reef speedster.", allowedLocations: [coral_coast]}
+  reef_guardian: {displayName: "<light_purple>Reef Guardian", rarity: EPIC, sizeMin: 60, sizeMax: 140, basePrice: 100, description: "Large protector of reefs.", allowedLocations: [coral_coast]}
+  pearl_angler: {displayName: "<light_purple>Pearl Angler", rarity: EPIC, sizeMin: 25, sizeMax: 65, basePrice: 95, description: "Hunts around pearl clusters.", allowedLocations: [coral_coast]}
+  storm_mackerel: {displayName: "<gold>Storm Mackerel", rarity: LEGENDARY, sizeMin: 35, sizeMax: 90, basePrice: 170, description: "Appears during rough weather.", allowedLocations: [coral_coast, abyssal_reach]}
+  thunder_ray: {displayName: "<gold>Thunder Ray", rarity: LEGENDARY, sizeMin: 110, sizeMax: 260, basePrice: 220, description: "Electric pulse in deep water.", allowedLocations: [abyssal_reach]}
+  leviathan_koi: {displayName: "<gold>Leviathan Koi", rarity: LEGENDARY, sizeMin: 90, sizeMax: 210, basePrice: 250, description: "Ancient giant koi.", allowedLocations: [abyssal_reach]}
+  abyss_blinker: {displayName: "<dark_aqua>Abyss Blinker", rarity: MYTHIC, sizeMin: 20, sizeMax: 70, basePrice: 400, description: "Flickers like distant stars.", allowedLocations: [abyssal_reach]}
+  void_sturgeon: {displayName: "<dark_aqua>Void Sturgeon", rarity: MYTHIC, sizeMin: 140, sizeMax: 320, basePrice: 500, description: "A monster of the trench.", allowedLocations: [abyssal_reach]}
+  moon_sardine: {displayName: "<white>Moon Sardine", rarity: COMMON, sizeMin: 9, sizeMax: 18, basePrice: 12, description: "Tiny and shiny.", allowedLocations: [starter_bay]}
+  kelp_runner: {displayName: "<green>Kelp Runner", rarity: UNCOMMON, sizeMin: 13, sizeMax: 38, basePrice: 26, description: "Swims through kelp walls.", allowedLocations: [coral_coast]}
+  sunfin: {displayName: "<green>Sunfin", rarity: UNCOMMON, sizeMin: 10, sizeMax: 28, basePrice: 24, description: "Bright daytime swimmer.", allowedLocations: [starter_bay, coral_coast]}
+  brine_pike: {displayName: "<blue>Brine Pike", rarity: RARE, sizeMin: 30, sizeMax: 75, basePrice: 52, description: "Salty water predator.", allowedLocations: [coral_coast]}
+  deep_orb_fish: {displayName: "<light_purple>Deep Orb Fish", rarity: EPIC, sizeMin: 16, sizeMax: 40, basePrice: 88, description: "Emits eerie blue light.", allowedLocations: [abyssal_reach]}
+  crown_tuna: {displayName: "<gold>Crown Tuna", rarity: LEGENDARY, sizeMin: 120, sizeMax: 240, basePrice: 260, description: "Royal giant of open waters.", allowedLocations: [coral_coast, abyssal_reach]}
+  phantom_fin: {displayName: "<dark_aqua>Phantom Fin", rarity: MYTHIC, sizeMin: 30, sizeMax: 80, basePrice: 430, description: "Seen only as a shadow.", allowedLocations: [abyssal_reach]}
+  oracle_whalelet: {displayName: "<dark_aqua>Oracle Whalelet", rarity: MYTHIC, sizeMin: 180, sizeMax: 350, basePrice: 600, description: "Said to predict tides.", allowedLocations: [abyssal_reach]}
